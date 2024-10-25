@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    min-height: 50vh;
+    background: #000;
+}
+
+.blink h1{
+    text-align: center;
+    padding: 90px;
+    font-size: 50px;
+    color: #0e3742;
+    position: relative;
+   line-height: 0.70em;
+    text-transform: uppercase;
+    outline: none;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,#0004);
+     animation: animate 2s linear infinite;
+}
+
+@keyframes animate{
+    0%,18%,20%,50%,60%,70%,80%,92%{
+        color: #0e3742;
+        text-shadow: none;
+    }
+    100%,80%,60%,50%{
+        color: #fff;
+        text-shadow: 0 0 10px #03bcf4,
+                    0 0 20px #03bcf4,
+                    0 0 40px #03bcf4,
+                    0 0 60px #03bcf4,
+                    0 0 180px #03bcf4;
+    }
+}
